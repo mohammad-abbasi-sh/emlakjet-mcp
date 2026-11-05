@@ -1,0 +1,146 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Product",
+   "url": "https://www.emlakjet.com/ilan/aciliyetten-sancaktepede-site-ici-iskanli-daire-20044346",
+   "name": "Aciliyetten Sancaktepede Site İçi İskanlı Daire",
+   "description": "Sancaktepe Yenidoğan'da, merkezi konumda yer alan bu bakımlı 2+1 daire, Saitoğlu Evleri sitesinde sizleri bekliyor.72m² net, 85m² brüt kullanım alanına sahip dairemiz, 1. katta bulunmaktadır. Kat mülkiyetli ve iskanlı olan dairemiz krediye uygundur.Saitoğlu Evleri, 2 bloktan oluşan geniş bir site olup, çocukların güvenle ve keyifle vakit geçirebileceği oyun alanları ve geniş yeşil alanlara sahiptir. Site içerisinde 24 saat güvenlik, kapalı ve açık otopark, jeneratör, su deposu, kamera sistemi ve apartman görevlisi gibi birçok sosyal donatı bulunmaktadır. Kombi (doğalgaz) ile ısınan dairemizde ısı yalıtımı da mevcuttur.Dairemiz, İETT peronlarının hemen yanında, merkezi bir konumda yer almaktadır. Okul, hastane, eczane, market, AVM, semt pazarı, eğlence ve spor merkezleri gibi tüm sosyal donatılara yürüme mesafesindedir. E-5 ve anayola yakınlığı sayesinde ulaşım oldukça kolaydır. Dolmuş, minibüs ve otobüs durakları yanı başınızdadır.Daire ÖzellikleriOda Sayısı: 2+1Net Kullanım Alanı: 72 m²Brüt Kullanım Alanı: 85 m²Bulunduğu Kat: 1Banyo Sayısı: 1Mutfak Tipi: KapalıBalkon: VarIsıtma: Kombi (Doğalgaz)Enerji Kimlik Belgesi: A SınıfıKullanım Durumu: Mülk SahibiTapu Durumu: Kat MülkiyetliSaitoğlu Evleri Sitesi ÖzellikleriSite Adı: Saitoğlu EvleriKat Sayısı: 6Bina Yaşı: 5Site İçerisinde: Evet24 Saat Güvenlik: VarKapalı & Açık Otopark: VarJeneratör: VarSu Deposu: VarKamera Sistemi: VarApartman Görevlisi: VarAsansör: VarYangın Merdiveni: VarIsı Yalıtımı: VarÇocuk Oyun Parkı: VarPark & Yeşil Alan: VarSpor Salonu: VarEğlence Merkezi: VarGeniş Arsa Alanı: Var Konum ve Çevre AvantajlarıMerkezi Konum: Yenidoğan Merve Mahallesi, İETT Peronları DibindeUlaşım Kolaylığı: Otobüs Durağı, Dolmuş, Minibüs, Metrobüs, E-5, Anayol, CaddeAlışveriş İmkanları: Market, AVM, Semt PazarıSağlık Hizmetleri: Sağlık Ocağı, EczaneEğitim Kurumları: İlkokul-Ortaokul, LiseDiğer Yakınlıklar: Cami, Şehir Merkezi, İtfaiyeSosyal Yaşam: Park, Yeşil Alan, Eğlence MerkeziManzara: Güney, Kuzey, Batı CepheliDetaylı bilgi ve daireyi görmek için lütfen Yaşar Bey ile iletişime geçin: .Not: Sarigazi, Çekmeköy, Samandıra bölgelerinde giriş kat 2*1 daire takası değerlendirilir.",
+   "image": [
+    "https://imaj.emlakjet.com/listing/20044346/7F1F02A904D1705A29DC3C5D9685D2E220044346.JPEG",
+    "https://imaj.emlakjet.com/listing/20044346/F8686392EE7350DDA701137F6DDBBAFE20044346.JPEG",
+    "https://imaj.emlakjet.com/listing/20044346/9F023FF84DDE7FF600353F63FE9AD70920044346.JPEG",
+    "https://imaj.emlakjet.com/listing/20044346/5F09FEBD14D5FE45CC39B2EFAB74A40E20044346.JPEG",
+    "https://imaj.emlakjet.com/listing/20044346/3B3E5DA5E66DDA5803F5EE762211E89020044346.JPEG",
+    "https://imaj.emlakjet.com/listing/20044346/D4BA0FAA44BE96D1F90B8B608666D5EC20044346.JPEG",
+    "https://imaj.emlakjet.com/listing/20044346/5EA82C35C2A52192D827A1217B017AF620044346.JPEG",
+    "https://imaj.emlakjet.com/listing/20044346/6689CB22904E30C596EE545F8DF139B920044346.JPEG",
+    "https://imaj.emlakjet.com/listing/20044346/6CC016E86B85D2DE71A7452C455E5B7820044346.JPEG",
+    "https://imaj.emlakjet.com/listing/20044346/84B6944DEC07D86018A9C5AE6CD2A8A420044346.JPEG"
+   ],
+   "offers": {
+    "@type": "Offer",
+    "url": "https://www.emlakjet.com/ilan/aciliyetten-sancaktepede-site-ici-iskanli-daire-20044346",
+    "price": 5950000,
+    "priceCurrency": "TRY",
+    "availability": "https://schema.org/InStock",
+    "businessFunction": "http://purl.org/goodrelations/v1#Sell",
+    "itemOffered": {
+     "@id": "https://www.emlakjet.com/ilan/aciliyetten-sancaktepede-site-ici-iskanli-daire-20044346#listing"
+    },
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "TR",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    }
+   }
+  },
+  {
+   "@type": "RealEstateListing",
+   "@id": "https://www.emlakjet.com/ilan/aciliyetten-sancaktepede-site-ici-iskanli-daire-20044346#listing",
+   "identifier": {
+    "@type": "PropertyValue",
+    "name": "İlan Numarası",
+    "value": "20044346"
+   },
+   "dateModified": "2026-11-03T14:37:43+03:00",
+   "itemOffered": {
+    "@type": "Residence",
+    "numberOfRooms": 3,
+    "floorSize": {
+     "@type": "QuantitativeValue",
+     "value": 95,
+     "unitCode": "MTK"
+    },
+    "additionalProperty": [
+     {
+      "@type": "PropertyValue",
+      "name": "İlan Numarası",
+      "value": "20044346"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "İlan Güncelleme Tarihi",
+      "value": "03 Kasım 2026"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "Kategori",
+      "value": "Satılık Daire"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "Isıtma Tipi",
+      "value": "Kombi Doğalgaz"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "Otopark",
+      "value": "Açık & Kapalı Otopark"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "Kullanım Durumu",
+      "value": "Mülk Sahibi Oturuyor"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "Krediye Uygunluk",
+      "value": "Krediye Uygun"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "Site İçerisinde",
+      "value": "Evet"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "Tapu Durumu",
+      "value": "Kat Mülkiyeti"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "Takas",
+      "value": "Var"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "Asansör",
+      "value": "Var"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "Mutfak",
+      "value": "Kapalı"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "Eşya Durumu",
+      "value": "Boş"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "Balkon",
+      "value": "Var"
+     }
+    ]
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "TR",
+    "streetAddress": "Merve Mahallesi",
+    "addressLocality": "Sancaktepe",
+    "addressRegion": "İstanbul"
+   }
+  },
+  {
+   "@type": "VideoObject",
+   "@id": "https://www.emlakjet.com/ilan/aciliyetten-sancaktepede-site-ici-iskanli-daire-20044346#video",
+   "name": "Aciliyetten Sancaktepede Site İçi İskanlı Daire",
+   "thumbnailUrl": "https://imaj.emlakjet.com/listing/20044346/7F1F02A904D1705A29DC3C5D9685D2E220044346.JPEG",
+   "embedUrl": "https://imaj.emlakjet.com/videos/listing/20044346/F228932F30163ADB9A5F56098E17F53C20044346.mp4",
+   "description": "Sancaktepe Yenidoğan'da, merkezi konumda yer alan bu bakımlı 2+1 daire, Saitoğlu Evleri sitesinde sizleri bekliyor.72m² net, 85m² brüt kullanım alanına sahip dairemiz, 1. katta bulunmaktadır. Kat mülkiyetli ve iskanlı olan dairemiz krediye uygundur.Saitoğlu Evleri, 2 bloktan oluşan geniş bir site olup, çocukların güvenle ve keyifle vakit geçirebileceği oyun alanları ve geniş yeşil alanlara sahiptir. Site içerisinde 24 saat güvenlik, kapalı ve açık otopark, jeneratör, su deposu, kamera sistemi ve apartman görevlisi gibi birçok sosyal donatı bulunmaktadır. Kombi (doğalgaz) ile ısınan dairemizde ısı yalıtımı da mevcuttur.Dairemiz, İETT peronlarının hemen yanında, merkezi bir konumda yer almaktadır. Okul, hastane, eczane, market, AVM, semt pazarı, eğlence ve spor merkezleri gibi tüm sosyal donatılara yürüme mesafesindedir. E-5 ve anayola yakınlığı sayesinde ulaşım oldukça kolaydır. Dolmuş, minibüs ve otobüs durakları yanı başınızdadır.Daire ÖzellikleriOda Sayısı: 2+1Net Kullanım Alanı: 72 m²Brüt Kullanım Alanı: 85 m²Bulunduğu Kat: 1Banyo Sayısı: 1Mutfak Tipi: KapalıBalkon: VarIsıtma: Kombi (Doğalgaz)Enerji Kimlik Belgesi: A SınıfıKullanım Durumu: Mülk SahibiTapu Durumu: Kat MülkiyetliSaitoğlu Evleri Sitesi ÖzellikleriSite Adı: Saitoğlu EvleriKat Sayısı: 6Bina Yaşı: 5Site İçerisinde: Evet24 Saat Güvenlik: VarKapalı & Açık Otopark: VarJeneratör: VarSu Deposu: VarKamera Sistemi: VarApartman Görevlisi: VarAsansör: VarYangın Merdiveni: VarIsı Yalıtımı: VarÇocuk Oyun Parkı: VarPark & Yeşil Alan: VarSpor Salonu: VarEğlence Merkezi: VarGeniş Arsa Alanı: Var Konum ve Çevre AvantajlarıMerkezi Konum: Yenidoğan Merve Mahallesi, İETT Peronları DibindeUlaşım Kolaylığı: Otobüs Durağı, Dolmuş, Minibüs, Metrobüs, E-5, Anayol, CaddeAlışveriş İmkanları: Market, AVM, Semt PazarıSağlık Hizmetleri: Sağlık Ocağı, EczaneEğitim Kurumları: İlkokul-Ortaokul, LiseDiğer Yakınlıklar: Cami, Şehir Merkezi, İtfaiyeSosyal Yaşam: Park, Yeşil Alan, Eğlence MerkeziManzara: Güney, Kuzey, Batı CepheliDetaylı bilgi ve daireyi görmek için lütfen Yaşar Bey ile iletişime geçin: .Not: Sarigazi, Çekmeköy, Samandıra bölgelerinde giriş kat 2*1 daire takası değerlendirilir.",
+   "uploadDate": "2026-10-31T21:10:39+03:00"
+  }
+ ]
+}
