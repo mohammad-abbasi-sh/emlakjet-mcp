@@ -1,0 +1,143 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "RealEstateListing",
+   "name": "Yıldırım Yapı'dan Metrobüsün Dibinde Kat Mülkiyetli Site İçerisinde Kelepir Satılık Arakat Daire!!",
+   "url": "https://www.emlakjet.com/ilan/yildirim-yapi-dan-metrobusun-dibinde-kat-mulkiyetli-site-icerisinde-kelepir-satilik-arakat-daire-20062034",
+   "image": "https://imaj.emlakjet.com/resize/640/0/listing/20062034/558B41A1366D36273ADA74C2C085641120062034.jpg",
+   "datePosted": "2026-11-05",
+   "offers": {
+    "@type": "Offer",
+    "url": "https://www.emlakjet.com/ilan/yildirim-yapi-dan-metrobusun-dibinde-kat-mulkiyetli-site-icerisinde-kelepir-satilik-arakat-daire-20062034",
+    "price": 1349000,
+    "priceCurrency": "TRY",
+    "availability": "https://schema.org/InStock"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "İlan Tipi",
+     "value": "Satılık Daire"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Konum",
+     "value": "Cumhuriyet Mahallesi, Esenyurt"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Oda Sayısı",
+     "value": "Stüdyo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metrekare",
+     "value": "60 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Kat",
+     "value": "3. Kat"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "İlan Etiketi",
+     "value": "YENİ"
+    }
+   ]
+  },
+  {
+   "@type": "RealEstateListing",
+   "name": "Yıldırım Yapı'dan Mehterçeşme'de Sıfır 145 M2 3+1 Arakat Satılık Kelepir Daire!!",
+   "url": "https://www.emlakjet.com/ilan/yildirim-yapi-dan-mehtercesme-de-sifir-145-m2-31-arakat-satilik-kelepir-daire-20046781",
+   "image": "https://imaj.emlakjet.com/resize/640/0/listing/20046781/93EB3378DEBA4AB43284BA3C131AEE3320046781.jpg",
+   "datePosted": "2026-11-01",
+   "offers": {
+    "@type": "Offer",
+    "url": "https://www.emlakjet.com/ilan/yildirim-yapi-dan-mehtercesme-de-sifir-145-m2-31-arakat-satilik-kelepir-daire-20046781",
+    "price": 4699000,
+    "priceCurrency": "TRY",
+    "availability": "https://schema.org/InStock"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "İlan Tipi",
+     "value": "Satılık Daire"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Konum",
+     "value": "Mehterçeşme Mahallesi, Esenyurt"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Oda Sayısı",
+     "value": "3+1"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metrekare",
+     "value": "145 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Kat",
+     "value": "3. Kat"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "İlan Etiketi",
+     "value": "YENİ"
+    }
+   ]
+  },
+  {
+   "@type": "RealEstateListing",
+   "name": "İstanbul Fatih Satılık 2+1daire 85 M Capa Hastanesine Ve Tramvaya Yürüme Mesafesinde 6 Dakika",
+   "url": "https://www.emlakjet.com/ilan/istanbul-fatih-satilik-21daire-85-m-capa-hastanesine-ve-tramvaya-yurume-mesafesinde-6-dakika-20050185",
+   "image": "https://imaj.emlakjet.com/resize/640/0/listing/20050185/566D978F1D17CB244781F12C7B07899E20050185.JPEG",
+   "datePosted": "2026-11-02",
+   "offers": {
+    "@type": "Offer",
+    "url": "https://www.emlakjet.com/ilan/istanbul-fatih-satilik-21daire-85-m-capa-hastanesine-ve-tramvaya-yurume-mesafesinde-6-dakika-20050185",
+    "price": 6400000,
+    "priceCurrency": "TRY",
+    "availability": "https://schema.org/InStock"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "İlan Tipi",
+     "value": "Satılık Daire"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Konum",
+     "value": "Şehremini Mahallesi, Fatih"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Oda Sayısı",
+     "value": "2+1"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metrekare",
+     "value": "95 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Kat",
+     "value": "Yüksek giriş"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "İlan Etiketi",
+     "value": "YENİ"
+    }
+   ]
+  }
+ ]
+}
