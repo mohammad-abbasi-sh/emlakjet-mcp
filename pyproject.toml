@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "emlakjet-mcp"
+version = "0.1.0"
+description = "Unofficial read-only MCP server for emlakjet.com real-estate listings (search, details, price stats)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "mcp<2",
+    "httpx>=0.27",
+]
+authors = [{ name = "Mohammad Abbasi" }]
+
+[project.scripts]
+emlakjet-mcp = "emlakjet_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/emlakjet_mcp"]
