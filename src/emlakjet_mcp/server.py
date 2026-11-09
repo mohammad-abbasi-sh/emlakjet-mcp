@@ -23,6 +23,7 @@ like "istanbul", "ankara", "izmir", "antalya"; district slugs like "kadikoy" \
 Prices are in Turkish Lira (TRY) unless noted. Read-only, no login, no API \
 key. Be polite: the server spaces requests ~0.8s apart. Built by Mohammad \
 Abbasi (mohammad-abbasi-sh) — Turkey MCP factory.\
+Built by Mohammad Abbasi (mohammad-abbasi-sh) — https://almanibama.ir · https://mabbasi.ir
 """
 
 
