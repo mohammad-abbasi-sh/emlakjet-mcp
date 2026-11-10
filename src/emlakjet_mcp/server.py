@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+from datetime import datetime, timezone
 import sys
 
 from mcp.server.fastmcp import FastMCP
@@ -27,8 +28,24 @@ Built by Mohammad Abbasi (mohammad-abbasi-sh) — https://almanibama.ir · https
 """
 
 
+_SOURCE = "emlakjet.com"
+_DISCLAIMER = "Unofficial read-only data from emlakjet.com; verify on the site before acting on it."
+
+
+def _envelope() -> dict:
+    return {
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+        "source": _SOURCE,
+        "disclaimer": _DISCLAIMER,
+    }
+
+
+def _ok(payload: dict) -> str:
+    return json.dumps({**_envelope(), **payload}, ensure_ascii=False)
+
+
 def _err(e: Exception) -> str:
-    return json.dumps({"error": str(e)}, ensure_ascii=False)
+    return _ok({"error": str(e)})
 
 
 @mcp.tool()
@@ -55,12 +72,9 @@ the page summary (total listings on the site for this search, cheapest price).""
         summary = _listings.parse_page_summary(html)
     except _http.EmlakjetError as e:
         return _err(e)
-    return json.dumps(
-        {"listing_type": listing_type, "property_type": property_type,
+    return _ok({"listing_type": listing_type, "property_type": property_type,
          "city": city, "district": district, "page": page,
-         "count": len(rows), "listings": rows, "summary": summary},
-        ensure_ascii=False,
-    )
+         "count": len(rows), "listings": rows, "summary": summary})
 
 
 @mcp.tool()
@@ -74,7 +88,7 @@ images. url_or_id: the listing URL from emlakjet_search, or its numeric id."""
         d = _listings.parse_detail(html)
     except _http.EmlakjetError as e:
         return _err(e)
-    return json.dumps(d, ensure_ascii=False)
+    return _ok(d)
 
 
 @mcp.tool()
@@ -89,10 +103,7 @@ emlakjet_search) and display name. city: slug like "istanbul"."""
                                               property_type)
     except _http.EmlakjetError as e:
         return _err(e)
-    return json.dumps(
-        {"city": city, "count": len(districts), "districts": districts},
-        ensure_ascii=False,
-    )
+    return _ok({"city": city, "count": len(districts), "districts": districts})
 
 
 @mcp.tool()
@@ -124,7 +135,17 @@ first N search pages (pages: 1..5, default 3; 50 listings per page)."""
                   "property_type": property_type, "city": city,
                   "district": district, "rooms": rooms,
                   "pages_scanned": pages})
-    return json.dumps(stats, ensure_ascii=False)
+    return _ok(stats)
+
+
+@mcp.tool()
+def emlakjet_health() -> str:
+    """Check whether emlakjet.com is reachable right now.
+
+    Returns status ok (HTTP 200), blocked (HTTP 403/429 — bot wall or
+    rate limit) or error, plus the HTTP status and the probed URL.
+    One polite request; it does not fetch any listings."""
+    return _ok(_http.health_check())
 
 
 def main() -> None:
