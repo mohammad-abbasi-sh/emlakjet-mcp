@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "emlakjet-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "Unofficial read-only MCP server for emlakjet.com real-estate listings (search, details, price stats)"
 readme = "README.md"
 license = { text = "MIT" }
