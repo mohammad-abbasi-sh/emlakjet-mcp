@@ -15,13 +15,13 @@ Add to your MCP client config (stdio):
   "mcpServers": {
     "emlakjet": {
       "command": "uvx",
-      "args": ["emlakjet-mcp"]
+      "args": ["emlakjet-mcp==0.1.0"]
     }
   }
 }
 ```
 
-Or run locally: `python -m emlakjet_mcp.server` (needs `mcp<2`, `httpx`).
+Or run locally: `python -m emlakjet_mcp.server` (needs `mcp<2`, `curl-cffi`).
 
 ## Tools
 
@@ -75,7 +75,7 @@ Notes:
 ## Development
 
 ```bash
-python3 -m venv .venv && .venv/bin/pip install "mcp<2" httpx pytest
+python3 -m venv .venv && .venv/bin/pip install "mcp<2" curl-cffi pytest
 .venv/bin/python -m pytest tests/ -q
 ```
 
