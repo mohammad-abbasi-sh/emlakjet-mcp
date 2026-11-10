@@ -15,7 +15,7 @@ Add to your MCP client config (stdio):
   "mcpServers": {
     "emlakjet": {
       "command": "uvx",
-      "args": ["emlakjet-mcp==0.1.0"]
+      "args": ["emlakjet-mcp==0.1.1"]
     }
   }
 }
