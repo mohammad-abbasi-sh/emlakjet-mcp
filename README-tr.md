@@ -13,7 +13,7 @@ MCP istemci yapılandırmanıza (stdio) ekleyin:
   "mcpServers": {
     "emlakjet": {
       "command": "uvx",
-      "args": ["emlakjet-mcp"]
+      "args": ["emlakjet-mcp==0.1.0"]
     }
   }
 }
@@ -73,7 +73,7 @@ Notlar:
 ## Geliştirme
 
 ```bash
-python3 -m venv .venv && .venv/bin/pip install "mcp<2" httpx pytest
+python3 -m venv .venv && .venv/bin/pip install "mcp<2" curl-cffi pytest
 .venv/bin/python -m pytest tests/ -q
 ```
 
