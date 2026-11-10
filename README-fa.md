@@ -13,7 +13,7 @@
   "mcpServers": {
     "emlakjet": {
       "command": "uvx",
-      "args": ["emlakjet-mcp==0.1.0"]
+      "args": ["emlakjet-mcp==0.1.1"]
     }
   }
 }
