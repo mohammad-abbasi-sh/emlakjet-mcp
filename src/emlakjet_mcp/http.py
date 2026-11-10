@@ -16,17 +16,12 @@ NOT reorder the server-rendered listings, so no sort is offered.
 """
 from __future__ import annotations
 
-import os
 import re
 import time
 
-import httpx
 
 BASE = "https://www.emlakjet.com"
-UA = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
-)
+
 TIMEOUT = 25.0
 MIN_INTERVAL = 0.8  # seconds between requests — be polite
 
@@ -42,28 +37,7 @@ class EmlakjetError(RuntimeError):
     pass
 
 
-def _client() -> httpx.Client:
-    # NOTE: proxy URL is read from the environment but never logged.
-    # trust_env=False because httpx fails to parse bracketed IPv6 entries
-    # (e.g. [::1]) that some environments put in no_proxy.
-    proxy = os.environ.get("https_proxy") or os.environ.get("HTTPS_PROXY")
-    # Standard SSL_CERT_FILE convention lets MITM-proxied environments
-    # point at a CA bundle that trusts the proxy; default uses certifi,
-    # which is correct for normal users.
-    verify: object = True
-    cafile = os.environ.get("SSL_CERT_FILE")
-    if cafile:
-        import ssl
 
-        verify = ssl.create_default_context(cafile=cafile)
-    return httpx.Client(
-        headers={"User-Agent": UA, "Accept-Language": "tr-TR,tr;q=0.9"},
-        timeout=TIMEOUT,
-        proxy=proxy or None,
-        verify=verify,
-        trust_env=False,
-        follow_redirects=True,
-    )
 
 
 def _slug(value: str, what: str) -> str:
@@ -103,6 +77,51 @@ def search_url(listing_type: str = "satilik", property_type: str = "daire",
     return url + "?" + "&".join(params)
 
 
+from curl_cffi import requests as _r
+
+_HEADERS = {
+    "Accept-Language": "tr-TR,tr;q=0.9,en;q=0.8",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+}
+
+
+_PROFILES = ("chrome120", "chrome131", "safari17_0")
+_MAX_ATTEMPTS = 2  # one retry with the next profile
+_RETRY_BACKOFF = 1.0  # seconds between attempts
+_profile_idx = 0  # sticky: profile that last succeeded
+
+
+def _request(url: str, headers: dict, timeout: float = TIMEOUT):
+    """GET with fingerprint rotation.
+
+    Starts at the sticky profile (chrome120 on a fresh process), retries
+    once with the next profile on HTTP 403/429 or a transport error, then
+    returns the last response (so the caller raises the specific 403/429
+    error) or raises a network error if every attempt failed at the
+    transport. Added 2026-11-10 (fleet audit fix).
+    """
+    global _profile_idx
+    last_exc: Exception | None = None
+    for k in range(_MAX_ATTEMPTS):
+        profile = _PROFILES[(_profile_idx + k) % len(_PROFILES)]
+        try:
+            resp = _r.get(url, impersonate=profile, headers=headers, timeout=timeout)
+        except Exception as e:
+            last_exc = e
+            if k + 1 < _MAX_ATTEMPTS:
+                time.sleep(_RETRY_BACKOFF)
+                continue
+            raise EmlakjetError(f"network error fetching {url}: {e}") from e
+        if resp.status_code in (403, 429):
+            if k + 1 < _MAX_ATTEMPTS:
+                time.sleep(_RETRY_BACKOFF)
+                continue
+            return resp
+        _profile_idx = (_profile_idx + k) % len(_PROFILES)
+        return resp
+    raise EmlakjetError(f"network error fetching {url}: {last_exc}") from last_exc
+
+
 def fetch(url: str) -> str:
     """GET a page; raises EmlakjetError on failure or bot-wall."""
     global _last_fetch
@@ -110,11 +129,18 @@ def fetch(url: str) -> str:
     if wait > 0:
         time.sleep(wait)
     try:
-        with _client() as c:
-            r = c.get(url)
+        r = _request(url, _HEADERS)
     except httpx.HTTPError as e:
         raise EmlakjetError(f"network error fetching {url}: {e}") from e
     _last_fetch = time.monotonic()
+    if resp.status_code == 403:
+        raise EmlakjetError(
+            "emlakjet.com refused the request (HTTP 403, bot wall) — try again later"
+        )
+    if resp.status_code == 429:
+        raise EmlakjetError(
+            "emlakjet.com rate-limited the request (HTTP 429) — try again later"
+        )
     if r.status_code != 200:
         raise EmlakjetError(f"emlakjet.com returned HTTP {r.status_code} for {url}")
     text = r.text
@@ -144,3 +170,23 @@ def fetch_detail(url_or_id: str) -> str:
             "listing id (get one from emlakjet_search first)"
         )
     return fetch(u)
+
+
+def health_check() -> dict:
+    """One polite probe of the source site.
+
+    Returns {"status": "ok"|"blocked"|"error", "http_status": int|None,
+    "url": ..., "detail": ...}. Used by the `emlakjet_health` tool
+    and the daily smoke CI. Added 2026-11-10 (fleet audit fix).
+    """
+    url = "https://www.emlakjet.com/"
+    try:
+        fetch(f"{BASE}/")
+    except EmlakjetError as e:
+        msg = str(e)
+        if "403" in msg:
+            return {"status": "blocked", "http_status": 403, "url": url, "detail": msg}
+        if "429" in msg:
+            return {"status": "blocked", "http_status": 429, "url": url, "detail": msg}
+        return {"status": "error", "http_status": None, "url": url, "detail": msg}
+    return {"status": "ok", "http_status": 200, "url": url}
