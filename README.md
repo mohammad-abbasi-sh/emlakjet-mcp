@@ -84,7 +84,7 @@ python3 -m venv .venv && .venv/bin/pip install "mcp<2" curl-cffi pytest
 
 ## License
 
-MIT
+[PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/) — free for personal and non-commercial use; commercial use needs a separate license (see LICENSE).
 
 ---
 
